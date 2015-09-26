@@ -23,7 +23,7 @@ The 'awesome' method is responsible for showing a name.
 How to use this method
 
 ```elixir
-ExPackage.awesome "Livia" // "Hello Livia"
+ExPackage.awesome "Livia" # "Hello Livia"
 ```
 
 ## Change this template to create your own package
