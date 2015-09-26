@@ -1,13 +1,27 @@
 defmodule ExPackage.Mixfile do
   use Mix.Project
 
+  @name "ExPackage"
+
+  @description """
+    Yet Another HTTP client for Elixir powered by hackney
+  """
+
+  @version "0.1.0"
+
+  @repo "https://github.com/chrisenytc/expackage"
+
   def project do
     [app: :expackage,
-     version: "0.1.0",
+     version: @version,
      elixir: "~> 1.0",
+     name: @name,
+     description: @description,
+     package: package,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps]
+     deps: deps,
+     source_url: @repo]
   end
 
   # Configuration for the OTP application
@@ -28,5 +42,11 @@ defmodule ExPackage.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     []
+  end
+
+  defp package do
+    [ contributors: ["Christopher EnyTC"],
+      licenses: ["MIT"],
+      links: %{"Github" => @repo} ]
   end
 end
