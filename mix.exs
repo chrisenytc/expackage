@@ -4,7 +4,7 @@ defmodule ExPackage.Mixfile do
   @name "ExPackage"
 
   @description """
-    Yet Another HTTP client for Elixir powered by hackney
+    A example of a Elixir package
   """
 
   @version "0.1.0"
@@ -28,7 +28,7 @@ defmodule ExPackage.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger]]
+    []
   end
 
   # Dependencies can be Hex packages:
@@ -45,7 +45,7 @@ defmodule ExPackage.Mixfile do
   end
 
   defp package do
-    [ contributors: ["Christopher EnyTC"],
+    [ maintainers: ["Christopher EnyTC"],
       licenses: ["MIT"],
       links: %{"Github" => @repo} ]
   end
